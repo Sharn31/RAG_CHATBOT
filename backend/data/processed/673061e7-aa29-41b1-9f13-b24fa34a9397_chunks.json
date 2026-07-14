@@ -1,0 +1,262 @@
+[
+  {
+    "text": "Evaluating AI Trading Strategies Using a  Paper Trading Framework \n \n             Sharndeep Kaur                                                              Amandeep Kaur \nSchool of Computational Sciences                                         School of Computational Sciences  \n          GNA University                                                          Assistant Professor, GNA University  \n          sharnsaini625@gmail.com                                     amandeepkaur@gnauniversity.edu.in \nAbstract \nConventional evaluation of AI driven stocks trading models are often relies on classification measures such as \ndirectional accuracy and F1-score.But these metrics fail to capture the actual growth of real world trading \nperformance because they don’t take into consideration",
+    "page": 1
+  },
+  {
+    "text": "metrics fail to capture the actual growth of real world trading \nperformance because they don’t take into consideration portfolio dynamics, risk exposure and capital \ngrowth.To address this limitation we purposes a framework for evaluating a AI models that is base on \nsimulations and take place in a real world paper trading environment. This approach enables to testing under \nthose conditions which are very similar to how the market works in real world taking into considerations like \nmarket volatility and compounding effects. We implement this framework in AlphaScope which is a full stack \ntrading platform built using the tech stack Django, REST Framework and react. We do a comparison of three \nAI paradigms: Reinforcement Learning using Proximal Policy Optimization, Supervised Machine",
+    "page": 1
+  },
+  {
+    "text": "We do a comparison of three \nAI paradigms: Reinforcement Learning using Proximal Policy Optimization, Supervised Machine Learning \nusing LightGBM,and a Large Language Model LLaMA 3 via Groq. These model are tested on 20 stocks from \nthe S&P 500 over a five-year period (2020-2024).The results shows that the RL agent has the highest average \nportfolio value ($110.30),which shows that it do a best job to maximize the results. While,the LLM based \nstrategy has the maximum drawdown(-12.86%)and the highest Simulation Performance Score(SPS= \n0.5802)which indicates strong risk adjustment performance from both PPO (0.5711) and LightGBM (0.5265). \nThe Large Language model approach has directional accuracy of 49.39%but it does better in SPS and \ndrawdown measures. This shows a gap between how",
+    "page": 1
+  },
+  {
+    "text": "pproach has directional accuracy of 49.39%but it does better in SPS and \ndrawdown measures. This shows a gap between how accurate predictions are and how they work well in real \nworld. We present a Simulation Performance Score(SPS),a combined statistic design to assess trading \nstrategies in simulated environment by simultaneously evaluating return, risks and stability. These results show \nhow important it is to use execution-aware, simulation-in-the-loop evaluation as a more accurate and realistic \napproach to test AI-driven trading systems. \nKeywords: algorithmic trading, paper trading simulation, reinforcement learning, LightGBM, Large \nLanguage models, AlphaScope. \n \n1. Introduction  \nEvaluation of AI models is typically based on classification metrics such as directional accuracy and",
+    "page": 1
+  },
+  {
+    "text": "1. Introduction  \nEvaluation of AI models is typically based on classification metrics such as directional accuracy and F1-\nscore. These measures are easy to use with computers but they are not really fit with the goals of a trading \nsystem. A model have  very good  directional accuracy but they  generate negative  results  when transaction \ncost, position sizing and temporal   accounting are accounted for .On the other hand a model that almost \nrandom can still have good risk adjustment performance by selectively capture high magnitude price \nmoments  while avoiding excessive trading. \nLeitch and Tanner were the initial to notice this difference between accuracy and performance, which this \nstudy shows is true across several AI paradigms. To overcome this limitation, we provide a",
+    "page": 1
+  },
+  {
+    "text": "and performance, which this \nstudy shows is true across several AI paradigms. To overcome this limitation, we provide a simulation-",
+    "page": 1
+  },
+  {
+    "text": "based evaluation approach that incorporates AI agents into a real-time paper trading environment, \nfacilitating assessment in conditions that are approximately close to  live market execution.  \nWe evaluate  three AI paradigms which are Proximal Policy Optimization (PPO) for Reinforcement \nLearning (RL) utilizing Stable-Baselines3, LightGBM for supervised Machine Learning (ML)and LLaMA \n3-8B for Large Language Models (LLMs) accessed through the Groq API. From January 2020 to \nDecember 2024, all models are tested on 20 large-cap S&P 500 stocks. \nTo enable  systematic cross paradigm  comparison  we introduced a Simulation Performance Score(SPS) \na normalized combined statistic that combines the Sharpe ratio, Calmar ratio, maximum drawdown, fill \nrate, and return consistency into a single",
+    "page": 2
+  },
+  {
+    "text": "atistic that combines the Sharpe ratio, Calmar ratio, maximum drawdown, fill \nrate, and return consistency into a single score with limits. This allows for systematic cross-paradigm \ncomparison.The RL agent achieves the highest average final portfolio value ($110.30)shows it is better at \nmaximizing returns. On the other hand, the LLM based approach has the lowest maximum drawdown \n(−12.86%) and the highest SPS (0.5802)which shows that it does better when risk into consideration. The \nML baseline shows  the worst absolute returns ($92.86 on average), which indicates how static supervised \napproaches don't work well because the  markets that are frequently changing. \nThese results shows that the AI driven trading systems with simulation in the loop evaluation works better \nthan traditional",
+    "page": 2
+  },
+  {
+    "text": "e results shows that the AI driven trading systems with simulation in the loop evaluation works better \nthan traditional accuracy based methods. They also indicate that model supremacy is always depend on the \nsituation and it changes depending on whether you want to maximize returns, minimize risk and balance \nperformance. \n \n2. RELATED WORK \nThe literature on predictions for financial time series includes many efforts to enhance predictive \nperformance through the use of additional data sources like social media and text. The first research on this \ntopic was performed by Johan Bollen et al. [1], who proved that sentiment on Twitter accurately forecasts \nchanges in the Dow Jones Industrial Average (DJIA). The problem with this study is that transaction costs \nare ignored, and therefore",
+    "page": 2
+  },
+  {
+    "text": "e Dow Jones Industrial Average (DJIA). The problem with this study is that transaction costs \nare ignored, and therefore the findings cannot be applied from the perspective of the investor. In addition, \nTobias Fischer and Christopher Krauss [2] have proved that long short-term memory (LSTM) neural \nnetwork performs better than the random model in the terms of accuracy. However, the advantage of the \nproposed approach vanishes once transaction costs are considered. Thus, there is an essential difference \nbetween predictive ability and profitability. As highlighted by Gary Leitch and James E. Tanner [17], an \nevaluation of financial forecasts on the basis of accuracy metrics alone leads to misleading conclusions. \nThis point is also confirmed by the review of Mustafa Sezer et al. [12]. \nIn",
+    "page": 2
+  },
+  {
+    "text": "ics alone leads to misleading conclusions. \nThis point is also confirmed by the review of Mustafa Sezer et al. [12]. \nIn the domain of reinforcement learning, Xiangyu Liu et al. [3] proposed FinRL, a widely used framework \nfor automated trading. t is among the commonly used platforms for carrying out automatic trading. \nHowever, the performance assessment of this platform is largely based on backtesting, ignoring the aspect \nof simulation of the execution process. According to the study carried out by Nevmyvaka, Feng, and Kearns \n[10], it is clear that reinforcement learning could be utilized to enhance the execution process with an aim \nof reducing the market impact created by the trading process. \nIn recent times, the application of large language models to finance-related tasks has",
+    "page": 2
+  },
+  {
+    "text": "created by the trading process. \nIn recent times, the application of large language models to finance-related tasks has also been explored. \nAlejandro Lopez-Lira and Yuehua Tang [4] found that sentiments inferred from large language models can \nbe used to predict stock prices, even though they did not formulate a full-fledged trading approach. \nBloombergGPT [5] by Shijie Wu et al. is another domain-specific language model whose performance is \nassessed mainly based on natural language processing tasks rather than trading results. FinBERT [16] is \none of the earliest transformer-based models created explicitly for financial sentiment analysis. Lastly,",
+    "page": 2
+  },
+  {
+    "text": "Yufeng Yu et al. [6] proposed trading bots based on large language models using retrieval augmentation \ntechniques, but no serious comparison has been conducted yet. \nIn terms of execution and evaluation, Robert Almgren and Neil Chriss [7] formulated a fundamental \napproach to modelling transaction cost and slippage. John Moody and Matthew Saffell [8] developed the \nidea of differential Sharpe ratio, which has been extensively adopted by reinforcement learning community \nin designing rewards for their algorithms. Moreover, J. D. Jobson and Bob M. Korkie [9] offered statistical \ntools for assessing the performance of portfolios, whereas Victor DeMiguel et al. [14] proved that simple \nbaseline methods like naive diversification were robust. Gautam Mitra and Bhaskar Bhatt [11] stressed the",
+    "page": 3
+  },
+  {
+    "text": "d that simple \nbaseline methods like naive diversification were robust. Gautam Mitra and Bhaskar Bhatt [11] stressed the \nsignificance of reproducibility in algorithmic trading experiments. Finally, Marcos Lopez de Prado [18] \nwarned about the dangers of backtest overfitting in finance.On the broader scope, surveys by John Heaton \net al. [19] and Stephen Roberts et al. [20] highlight the increasing popularity of deep learning models in \nfinancial markets but also highlight the absence of any standardization in evaluating the performance of \nmodels. \nGenerally, existing literature lacks coherence within the domains of predictive modeling, reinforcement \nlearning, and natural language processing-based methods, with differing approaches to their performance \nevaluations. Earlier studies have",
+    "page": 3
+  },
+  {
+    "text": "ral language processing-based methods, with differing approaches to their performance \nevaluations. Earlier studies have generally concentrated on prediction or back-testing alone without \nincorporating any execution-aware simulation or benchmark testing. This study fills this void by providing \na unified framework for execution-aware simulation along with a Simulation Performance Score (SPS). \n \n \n  \nTopic \nMethodology \nEvaluation \nMetric \nKey \nContribution \nIdentified Gap \n[1] \nTwitter \nSentiment \nTrading \nSentiment \nAnalysis (ML) \nAccuracy \nPredicts DJIA \nusing social \nmedia \nNo transaction cost, \nno portfolio \nevaluation \n[2] \nLSTM Stock \nPrediction \nDeep Learning \n(ML) \nAccuracy \nOutperforms \nrandom \nprediction \nPerformance drops \nafter costs \n[3] \nAutomated \nTrading (FinRL)",
+    "page": 3
+  },
+  {
+    "text": "arning \n(ML) \nAccuracy \nOutperforms \nrandom \nprediction \nPerformance drops \nafter costs \n[3] \nAutomated \nTrading (FinRL) \nReinforcement \nLearning \nBacktesting \nEnd-to-end \nRL \nframework \nNo execution-aware \nsimulation \n[10] \nTrade Execution \nRL \nCost \noptimization \nMinimizes \nmarket impact \nNot full trading \nstrategy \n[13] \nFinancial Signal \nTrading \nDeep RL \nReturns \nLearns trading \nsignals \nLimited \nbenchmarking \n[15] \nPortfolio \nManagement \nRL \nPortfolio \nreturn \nAsset \nallocation via \nRL \nNo unified \ncomparison \n[4] \nChatGPT \nSentiment \nLLM \nAccuracy \nPredicts stock \nmovement \nNo trading \nframework \n[5] \nBloombergGPT \nLLM \nNLP \nbenchmarks \nFinancial \ndomain LLM \nNot evaluated for \ntrading",
+    "page": 3
+  },
+  {
+    "text": "[6] \nLLM Trading \nAgents \nLLM + RAG \nStrategy \noutput \nAutonomous \ntrading agents \nWeak evaluation, no \ncomparison \n[16] \nFinBERT \nNLP \n(Transformer) \nSentiment \naccuracy \nFinancial text \nanalysis \nNo trading \nperformance \n[7] \nTransaction Cost \nModel \nQuant Finance \nCost model \nSlippage \nmodeling \nNot strategy-level \nevaluation \n[8] \nRL Reward \nDesign \nRL \nSharpe ratio \nDifferential \nSharpe ratio \nLimited evaluation \nscope \n[9] \nPerformance \nTesting \nStatistics \nSharpe test \nStrategy \ncomparison \nNot predictive \n[14] \nPortfolio Theory \nFinance \nReturns \n1/N baseline \nstrategy \nOversimplified \n[11] \nReproducibility \nEmpirical \nFinance \nReplication \nValidates \nresults \nNo performance \nimprovement focus \n[17] \nForecast \nEvaluation \nEconomics \nProfit-based \nAccuracy vs \nprofit gap \nNot",
+    "page": 4
+  },
+  {
+    "text": "ts \nNo performance \nimprovement focus \n[17] \nForecast \nEvaluation \nEconomics \nProfit-based \nAccuracy vs \nprofit gap \nNot applied to \nmodern ML \n[18] \nML in Finance \nRisk \nQuant Finance \nBacktesting \nOverfitting \nissue \nLacks unified \nframework \n[19] \nDeep Learning in \nFinance \nSurvey \nReview \nBroad \noverview \nNo evaluation \nstandard \n[20] \nDeep Trading \nSystems \nSurvey \nReview \nDL in trading \nFragmented \nmethodologies \n \n3. METHODOLOGY \n \n3.1 System Architecture  \n \nThe paper trading module is the  part of AlphsScope. Each AI approach has its own agent  which \nis accessible through separate API endpoints and authenticated by JSON web tokens (JWT). \nThe yfinance API gets daily market data. A portfolio-level simulation engine takes trading signals \nand carries out orders in a market where",
+    "page": 4
+  },
+  {
+    "text": "s daily market data. A portfolio-level simulation engine takes trading signals \nand carries out orders in a market where frictions can be changed. Each agent starts with capital \namount of $100 per security and gets the same data feeds. This make it possible to compare the \nMachine Learning, Reinforcement Learning and Large Language Model strategies can be \ncompared in a controlled way.  \n \n3.2 Transaction Cost Model \n \nAll methods use a  transaction cost of 0.1% per trade, which is the same as what retail brokerages \ndo. You have to pay transaction costs when a strategy's signal tells you to modify your position. \nThis system offers ways to punish high turnover, which is an important feature that most academic \nevaluations don't have. It quickly demonstrates the difference in accuracy",
+    "page": 4
+  },
+  {
+    "text": "h is an important feature that most academic \nevaluations don't have. It quickly demonstrates the difference in accuracy performance, illustrating \nthat a strategy that regularly uses low-confidence signals will be punished, even if its directional \npredictions are  partially accurate.",
+    "page": 4
+  },
+  {
+    "text": "3.3 Simulation Performance Score (SPS) \n \nWe introduce the Simulation Performance Score (SPS), a limited composite metric that \nenables consistent cross-paradigm comparison, defined as: \n \n𝑆𝑃𝑆= 0.30 𝑆𝑅𝑛𝑜𝑟𝑚+ 0.25 𝐶𝑎𝑙𝑚𝑎𝑟𝑛𝑜𝑟𝑚+ 0.20 𝑀𝐷𝐷𝑛𝑜𝑟𝑚+ 0.15 𝐹𝑖𝑙𝑙𝑅𝑎𝑡𝑒\n+ 0.10 𝐶𝑜𝑛𝑠𝑖𝑠𝑡𝑒𝑛𝑐𝑦 \n \nAll components are set to the range [0, 1] so that no one metric may take over the score. The Sharpe \nratio can only go from −3 to 3, and the Calmar ratio can only go from 0 to 5. MDD_norm=1+mdd, \nwhere mdd∈[-1,0], changes the maximum drawdown. \n \nFillRate indicates how many of the created signals are successfully executed, whereas Consistency \nshows how many of the profitable time periods there are. This formulation  describes the return, \nrisk, and execution efficiency. \n \n3.4 ML Strategy : LightGBM \n \nA LightGBM",
+    "page": 5
+  },
+  {
+    "text": "re. This formulation  describes the return, \nrisk, and execution efficiency. \n \n3.4 ML Strategy : LightGBM \n \nA LightGBM gradient boosting regressor is used in the supervised machine learning baseline to \nforecast how much the stock will go up the next day. The model contains 200 estimators, a \nmaximum tree depth of 6, a learning rate of 0.05, and a random seed of 42, which means that the \noutcomes will always be the same. The input features are lag₁, lag₂, and lag₃, which are three daily \nreturns that have been lagged. A lengthy signal (+1) is delivered when results are predicted to be \ngood. A brief signal (−1) is issued when returns are expected to be negative. We split the 20 stocks \ninto two groups: 80% for training and 20% for testing. This got rid of look-ahead bias. Every time",
+    "page": 5
+  },
+  {
+    "text": "split the 20 stocks \ninto two groups: 80% for training and 20% for testing. This got rid of look-ahead bias. Every time  \nthe signal changes the transaction costs are increased. This stops people from trading too much and \nmakes sure that ratings are based on how things really work. \n \n3.5 RL Strategy : PPO Agent \n \nThe RL agent is developed using Stable-Baselines3 library's Proximal Policy Optimization (PPO) \nand trained in a custom Gymnasium environment. There are three lagged daily returns in the state \nspace which are  lag₁, lag₂, and lag₃. There are three choices in the discrete action space which are \nshort (0), hold (1), and long (2). The reward section is based on how much money a portfolio makes \nat each step, with  the transaction fees added in when the position changes. Holding",
+    "page": 5
+  },
+  {
+    "text": "n how much money a portfolio makes \nat each step, with  the transaction fees added in when the position changes. Holding actions gets a \nsmall penalty of -0.0001. This is to stop policies that make individuals not do anything, but still let \nthe agent choice not to act when things aren't obvious. The training has 20,000 timesteps, and \nn_steps = 256. The evaluation is done in a deterministic way on the 20% test set that was set aside. \nIt is vital to remember that the agency ended up with a hold-only policy for nine of the twenty \nassets. This was likely because the rewards in those markets weren't extremely unstable. These \ncases are not included in the stated RL findings, thus there are 11 securities that qualify.",
+    "page": 5
+  },
+  {
+    "text": "3.6 LLM Strategy : LLaMA 3 \n \nThe LLM-based approach uses the Groq inference API to get LLaMA 3-8B, which it then employs \nas a zero-shot trading decision agent. The ticker symbol has the Relative Strength Index (RSI), the \nfive day momentum, and a short list of recent daily results are all included in each inference prompt. \nThe model is taught to give back a structured JSON response with three fields which are  (i) action \n(long, short, or hold), (ii) a confidence score between 0 and 1, and (iii) a justification in simple \nlanguage. We only employ signals with a confidence level of 0.5 or higher to cut down on noise \nfrom forecasts that aren't very sure. The LLM only works with prompt-conditioned inference, \nwhich is a very different way of doing things than the ML and RL agents. It",
+    "page": 6
+  },
+  {
+    "text": "ly works with prompt-conditioned inference, \nwhich is a very different way of doing things than the ML and RL agents. It depends on knowledge \nof the world that has already been learned instead of market patterns that have been learned. \nBecause of API rate constraints, the LLM technique doesn't trade as regularly as ML and RL agents \ndo. Instead of making a choice every day, it makes one every five trading days. \n \n \n4. EXPERIMENTAL SETUP \nThe yfinance API gets the daily adjusted closing prices for 20 large-cap S&P 500 stocks from January \n2020 to December 2024. This covers about 1,258 trading days per asset. The chosen symbols includes six \ndifferent sectors: Technology, Communication, Consumer Discretionary, Financials, Healthcare, Energy, \nand Consumer Staples. This makes sure that",
+    "page": 6
+  },
+  {
+    "text": "logy, Communication, Consumer Discretionary, Financials, Healthcare, Energy, \nand Consumer Staples. This makes sure that the market is well covered. The full list of securities  are in a \nTABLE I \n \nTABLE I.  Evaluated Securities — S&P 500 Universe \n \nTicker \nCompany \nSector \nAAPL \nApple Inc. \nTechnology \nMSFT \nMicrosoft Corp \nTechnology \nGOOGL \nAlphabet Inc. \nCommunication \nAMZN \nAmazon.com Inc. \nConsumer Discr. \nNVDA \nNVIDIA Corp. \nTechnology \nMETA \nMeta Platforms \nCommunication \nTSLA \nTesla Inc. \nConsumer Discr. \nJPM \nJPMorgan Chase \nFinancials \nV \nVisa Inc. \nFinancials \nMA \nMastercard Inc. \nFinancials \nUNH \nUnitedHealth \nHealthcare \nJNJ \nJohnson & Johnson \nHealthcare \nXOM \nExxon Mobil \nEnergy \nPG \nProcter & Gamble \nConsumer Staples \nHD \nHome Depot \nConsumer Discr. \nBAC \nBank of",
+    "page": 6
+  },
+  {
+    "text": "lthcare \nXOM \nExxon Mobil \nEnergy \nPG \nProcter & Gamble \nConsumer Staples \nHD \nHome Depot \nConsumer Discr. \nBAC \nBank of America \nFinancials \nKO \nCoca-Cola Co. \nConsumer Staples \nPFE \nPfizer Inc. \nHealthcare \nWMT \nWalmart Inc. \nConsumer Staples \nDIS \nWalt Disney Co. \nCommunication",
+    "page": 6
+  },
+  {
+    "text": "5. RESULTS AND ANALYSIS \n5.1 Overall Strategy Comparison \nThe results of overall performance indicator for all securities in TABLE II . The RL agent has the highest \naverage end portfolio value ($110.30), which means it can make money in markets with strong \nunpredictability. The LLM method has the lowest average maximum drawdown (−12.86%), which \nimplies it is more careful and aware of risk. The LLM technique achieves the highest overall score for \nSPS (0.5802), which is just better than the RL agent (0.5711) and the ML baseline (0.5265). The ML \nmethod has the lowest average absolute returns ($92.86), which suggests that lagged feature regression \ndoesn't operate well in financial markets that aren't stable. \n \nTABLE II.  Aggregate Strategy Performance (Averaged Across All Securities)",
+    "page": 7
+  },
+  {
+    "text": "in financial markets that aren't stable. \n \nTABLE II.  Aggregate Strategy Performance (Averaged Across All Securities) \n \nStrategy \nStocks \nAvg Sharpe \nAvg Max DD \nAvg SPS \nAvg Final ($) \nML (LightGBM) \n20 \n-0.608 \n-27.20% \n0.527 \n$92.86 \nRL (PPO) \n11 \n-0.209 \n-23.85% \n0.571 \n$110.30 \nLLM (LLaMA3) \n20 \n-0.969 \n-12.86% \n0.580 \n$98.13 \n \nFig. 1. Aggregate performance comparison: SPS, final portfolio value, Sharpe ratio, and maximum drawdown \nacross all four strategies. Buy-and-hold dominates on absolute return but suffers the deepest drawdowns, \nyielding a lower SPS than the AI strategies.",
+    "page": 7
+  },
+  {
+    "text": "5.2 Accuracy Performance Correlation \nTable III presents the Pearson correlations between measures based on predictions and SPS. The ML and \nRL techniques demonstrate strong positive correlations between the Sharpe ratio and SPS (r = 0.9645 and \nr = 0.9497, respectively). This indicates that the two measures are well aligned in each paradigm. Whereas \nThe LLM technique reveals a moderate positive correlation between directional correctness and the \nrealized Sharpe ratio (r = 0.5318, p = 0.0158). This indicates that, considering realistic transaction costs \nand execution constraints, forecast accuracy is an insufficient proxy for trading performance a finding \nthat corresponds with the theoretical perspective of Leitch and Tanner [17]. \n \n \nTABLE III.  Accuracy–Performance Correlation",
+    "page": 8
+  },
+  {
+    "text": "orresponds with the theoretical perspective of Leitch and Tanner [17]. \n \n \nTABLE III.  Accuracy–Performance Correlation (Pearson r) \n \nStrategy \nMetric Pair \nPearson r \np-value \nInterpretation \nML (LightGBM) \nSharpe vs SPS \n0.9645 \n7.52 × 10⁻¹² \nStrong positive \nRL (PPO) \nSharpe vs SPS \n0.9497 \n7.84 × 10⁻⁶ \nStrong positive \nLLM (LLaMA3) \nAccuracy vs Sharpe \n0.5318 \n0.0158 \nModerate positive \n \n5.3 ML Per-Stock Results \nTable IV shows the findings of LightGBM for all 20 securities. TSLA (Sharpe = 0.955, Final = $156.4) \nand PFE (Sharpe = 0.763, Final = $120.9) are high-volatility stocks that do very well. This is in \naccordance with the assumption that lagged-return regression signals work best in markets that are \ntrending and have a lot of variance. GOOGL (Sharpe = −2.114) and JNJ",
+    "page": 8
+  },
+  {
+    "text": "n regression signals work best in markets that are \ntrending and have a lot of variance. GOOGL (Sharpe = −2.114) and JNJ (Sharpe = −2.524) do the worst, \nwhich shows that the model doesn't operate well when volatility is low or returns to the mean. \n \nTABLE IV.  ML (LightGBM) Per-Stock Results \n \nTicker \nSharpe \nMax DD \nSPS \nFinal ($) \nAnn. Return \nAAPL \n-0.440 \n-22.26% \n0.532 \n$91.8 \n-6.02% \nMSFT \n-0.982 \n-26.87% \n0.496 \n$83.9 \n-15.60% \nGOOGL \n-2.114 \n-49.68% \n0.393 \n$55.3 \n-55.40% \nAMZN \n-0.029 \n-19.41% \n0.566 \n$99.2 \n+3.17% \nNVDA \n0.020 \n-41.42% \n0.521 \n$91.6 \n+5.05% \nMETA \n0.514 \n-29.62% \n0.603 \n$117.7 \n+22.81% \nTSLA \n0.955 \n-31.37% \n0.684 \n$156.4 \n+64.48% \nJPM \n-0.456 \n-25.84% \n0.524 \n$90.9 \n-6.77% \nV \n-1.929 \n-31.27% \n0.440 \n$74.1 \n-28.59% \nMA \n0.199 \n-13.29% \n0.609 \n$106.1 \n+7.16%",
+    "page": 8
+  },
+  {
+    "text": "456 \n-25.84% \n0.524 \n$90.9 \n-6.77% \nV \n-1.929 \n-31.27% \n0.440 \n$74.1 \n-28.59% \nMA \n0.199 \n-13.29% \n0.609 \n$106.1 \n+7.16% \nUNH \n-1.785 \n-41.25% \n0.427 \n$61.7 \n-44.66% \nJNJ \n-2.524 \n-32.17% \n0.409 \n$70.5 \n-33.95% \nXOM \n-0.052 \n-21.07% \n0.561 \n$101.2 \n+3.01% \nPG \n-0.819 \n-20.09% \n0.518 \n$91.0 \n-8.33% \nHD \n-0.273 \n-25.81% \n0.533 \n$96.4 \n-1.62%",
+    "page": 8
+  },
+  {
+    "text": "Ticker \nSharpe \nMax DD \nSPS \nFinal ($) \nAnn. Return \nBAC \n-0.947 \n-21.27% \n0.509 \n$81.7 \n-17.64% \nKO \n-1.132 \n-23.46% \n0.496 \n$89.3 \n-10.50% \nPFE \n0.763 \n-21.41% \n0.645 \n$120.9 \n+21.76% \nWMT \n0.014 \n-12.10% \n0.593 \n$102.6 \n+4.25% \nDIS \n-1.151 \n-34.37% \n0.472 \n$74.8 \n-25.81% \n \n \n5.4 RL Per-Stock Results \nTable V shows the PPO outcomes for the 11 securities for which the agent made non-degenerate policies. \nThe agent can keep the trend going because NVDA has the highest Sharpe ratio (1.753) and ultimate \nportfolio value ($225.0).The nine securities that were not included all had hold-only policies. This showed \nthat the PPO agent was sensitive to market regime,in those markets, there wasn't enough return volatility \nfor the agent to develop a useful trading policy. Standard accuracy-based",
+    "page": 9
+  },
+  {
+    "text": "arkets, there wasn't enough return volatility \nfor the agent to develop a useful trading policy. Standard accuracy-based measurements do not capture \nthis regime sensitivity, which shows how useful simulation-based evaluation can be for diagnosis. \n \n \n \nTABLE V.  RL (PPO) Per-Stock Results (11 of 20 Securities) \n \nTicker \nSharpe \nMax DD \nSPS \nFinal ($) \nAnn. Return \nAAPL \n0.316 \n-20.38% \n0.601 \n$108.8 \n+11.08% \nMSFT \n-0.561 \n-19.88% \n0.531 \n$91.3 \n-7.20% \nGOOGL \n0.299 \n-25.44% \n0.587 \n$108.7 \n+12.42% \nNVDA \n1.753 \n-29.51% \n0.788 \n$225.0 \n+96.25% \nTSLA \n0.802 \n-45.06% \n0.607 \n$141.3 \n+54.93% \nJPM \n0.455 \n-11.30% \n0.664 \n$112.5 \n+14.72% \nXOM \n-1.089 \n-25.83% \n0.493 \n$83.2 \n-16.80% \nPG \n-0.783 \n-15.05% \n0.530 \n$91.7 \n-7.67% \nHD \n-0.460 \n-21.38% \n0.533 \n$92.9 \n-5.43% \nKO \n-1.661 \n-19.99%",
+    "page": 9
+  },
+  {
+    "text": "83.2 \n-16.80% \nPG \n-0.783 \n-15.05% \n0.530 \n$91.7 \n-7.67% \nHD \n-0.460 \n-21.38% \n0.533 \n$92.9 \n-5.43% \nKO \n-1.661 \n-19.99% \n0.476 \n$83.8 \n-17.19% \nPFE \n-1.364 \n-28.55% \n0.473 \n$74.1 \n-27.71% \n \n5.5 LLM Per-Stock Results \nTable VI demonstrate the LLaMA 3 results for all 20 securities. The approach gets a competitive mean \nSPS of 0.5802, even though its average directional accuracy is only 49.39%. The best performers are DIS \n(Sharpe = 2.619, SPS = 0.960), TSLA (Sharpe = 1.871, SPS = 0.898), and KO (SPS = 0.814). \nUnderperformers are mostly in banking companies with prices that change quickly.The symbols JPM \n(Sharpe = -3.296), BAC (Sharpe = -3.339), and V (Sharpe = −3.368). The LLM does well on a risk-\nadjusted basis even when it doesn't do well on directional accuracy because it only trades",
+    "page": 9
+  },
+  {
+    "text": "The LLM does well on a risk-\nadjusted basis even when it doesn't do well on directional accuracy because it only trades when it has a \nlot of confidence in the deal. This limits exposure to transaction costs and bad market conditions.",
+    "page": 9
+  },
+  {
+    "text": "TABLE VI.  LLM (LLaMA 3) Per-Stock Results \n \nTicker \nSharpe \nMax DD \nCalmar \nSPS \nFinal ($) \nAccuracy \nAAPL \n0.333 \n-7.20% \n1.712 \n0.686 \n$101.81 \n57.14% \nMSFT \n-1.773 \n-9.76% \n-2.919 \n0.491 \n$94.30 \n57.14% \nGOOGL \n-1.179 \n-11.83% \n-2.249 \n0.516 \n$94.34 \n53.06% \nAMZN \n-0.668 \n-10.95% \n-1.472 \n0.543 \n$96.07 \n48.98% \nNVDA \n0.644 \n-15.53% \n2.302 \n0.713 \n$104.69 \n46.94% \nMETA \n-0.374 \n-18.70% \n-0.418 \n0.542 \n$97.54 \n53.06% \nTSLA \n1.871 \n-20.51% \n7.064 \n0.898 \n$125.53 \n51.02% \nJPM \n-3.296 \n-18.56% \n-4.086 \n0.411 \n$85.77 \n44.90% \nV \n-3.368 \n-16.15% \n-2.750 \n0.417 \n$91.54 \n46.94% \nMA \n0.260 \n-8.78% \n0.890 \n0.639 \n$101.32 \n48.98% \nUNH \n-2.733 \n-18.76% \n-2.671 \n0.425 \n$90.36 \n38.78% \nJNJ \n-2.751 \n-7.31% \n-4.353 \n0.447 \n$93.84 \n40.82% \nXOM \n-1.214 \n-12.67% \n-1.474 \n0.513 \n$96.11 \n48.98% \nPG",
+    "page": 10
+  },
+  {
+    "text": ".36 \n38.78% \nJNJ \n-2.751 \n-7.31% \n-4.353 \n0.447 \n$93.84 \n40.82% \nXOM \n-1.214 \n-12.67% \n-1.474 \n0.513 \n$96.11 \n48.98% \nPG \n-1.110 \n-10.18% \n-1.355 \n0.523 \n$97.11 \n55.10% \nHD \n-2.770 \n-16.89% \n-3.305 \n0.426 \n$89.29 \n46.94% \nBAC \n-3.339 \n-23.22% \n-3.140 \n0.402 \n$86.32 \n44.90% \nKO \n0.535 \n-2.61% \n3.858 \n0.814 \n$101.85 \n53.06% \nPFE \n-2.017 \n-9.19% \n-3.790 \n0.480 \n$93.11 \n48.98% \nWMT \n0.959 \n-9.12% \n2.618 \n0.759 \n$104.32 \n44.90% \nDIS \n2.619 \n-9.37% \n9.355 \n0.960 \n$117.44 \n57.14% \n \n5.6 Buy-and-Hold Benchmark \nTable VII shows the outcomes for each stock in the passive buy-and-hold benchmark. In this case, $100 \nis given to each security at the start of the test period and held until December 2024 without being \nrebalanced. This technique doesn't have any transaction costs and keeps a fill rate",
+    "page": 10
+  },
+  {
+    "text": "d until December 2024 without being \nrebalanced. This technique doesn't have any transaction costs and keeps a fill rate of 1.0 by design. \nThe benchmark has the greatest average Sharpe ratio which is 1.1317 .Its final portfolio value is $135.17, \nmostly because NVIDIA (NVDA) (+$177.71) and Meta Platforms (META) (+$67.67) did quite well. \nWith an average Simulation Performance Score (SPS) of 0.6664, it outperforms all AI-based methods \n(LLM: 0.580, RL: 0.571, ML: 0.527), showing that it performs better when risk is taken into \nconsideration. The lower average maximum drawdown is -18.00% also supports this outcome. This \nshows that SPS rewards strategies that effectively balance strong absolute returns with controlled \ndownside risk through the combined influence of the normalized drawdown",
+    "page": 10
+  },
+  {
+    "text": "balance strong absolute returns with controlled \ndownside risk through the combined influence of the normalized drawdown (MDD_norm) and Calmar \nratio components. \nTABLE VII.  Buy-and-Hold Benchmark Per-Stock Results \n \nTicker \nSharpe \nMax DD \nCalmar \nSPS \nFinal ($) \nAnn. Return \nAAPL \n1.3257 \n-15.35% \n2.0602 \n0.531 \n$131.63 \n+31.63% \nMSFT \n0.7492 \n-15.49% \n0.8923 \n0.6047 \n$113.82 \n+13.82% \nGOOGL \n1.2736 \n-22.14% \n1.6894 \n0.6630 \n$137.40 \n+37.40% \nAMZN \n1.4804 \n-19.49% \n2.3422 \n0.7049 \n$145.65 \n+45.65% \nNVDA \n2.2105 \n-27.05% \n6.5706 \n0.8620 \n$277.71 \n+177.71%",
+    "page": 10
+  },
+  {
+    "text": "Ticker \nSharpe \nMax DD \nCalmar \nSPS \nFinal ($) \nAnn. Return \nMETA \n1.5951 \n-18.43% \n3.6727 \n0.476 \n$167.67 \n+67.67% \nTSLA \n1.1281 \n-42.83% \n1.5872 \n0.6005 \n$167.99 \n+67.99% \nJPM \n1.6706 \n-10.13% \n4.3486 \n0.6877 \n$144.05 \n+44.05% \nV \n1.2644 \n-12.45% \n1.7695 \n0.6863 \n$122.04 \n+22.04% \nMA \n1.4317 \n-11.83% \n2.0231 \n0.7050 \n$123.93 \n+23.93% \nUNH \n0.0615 \n-22.05% \n-0.0923 \n0.5118 \n$97.96 \n-2.04% \nJNJ \n-0.3106 \n-13.68% \n-0.4134 \n0.5083 \n$94.35 \n-5.65% \nXOM \n0.684 \n-15.15% \n0.6198 \n0.5785 \n$109.39 \n+9.39% \nPG \n1.1149 \n-8.88% \n1.8982 \n0.542 \n$116.86 \n+16.86% \nHD \n0.7898 \n-17.74% \n0.8527 \n0.5974 \n$115.13 \n+15.13% \nBAC \n1.3918 \n-16.95% \n1.9901 \n0.6860 \n$133.73 \n+33.73% \nKO \n0.6999 \n-14.86% \n0.5705 \n0.5858 \n$108.48 \n+8.48% \nPFE \n0.0020 \n-19.77% \n-0.1327 \n0.5086 \n$97.38 \n-2.62% \nWMT \n3.2364 \n-5.80%",
+    "page": 11
+  },
+  {
+    "text": "99 \n-14.86% \n0.5705 \n0.5858 \n$108.48 \n+8.48% \nPFE \n0.0020 \n-19.77% \n-0.1327 \n0.5086 \n$97.38 \n-2.62% \nWMT \n3.2364 \n-5.80% \n12.8295 \n0.587 \n$174.42 \n+74.42% \nDIS \n0.9558 \n-29.98% \n0.7947 \n0.427 \n$123.83 \n+23.83% \n \nFig. 2. Per-stock SPS heatmap across all four strategies. Green = high SPS, red = low SPS. RL cells are blank for the \n9 degenerate stocks. \n \n \nTable VIII shows the  buy-and-hold benchmark. The passive benchmark is the best on all of the main metrics \nwhich are Sharpe ratio, SPS, and final portfolio value, because the market was very strong over the 2020–2024",
+    "page": 11
+  },
+  {
+    "text": "evaluation period. The LLM strategy has the best maximum drawdown control (−12.86%) of the AI \ntechniques.  \nTABLE VIII.   Aggregate Comparison Including Buy-and-Hold \n \nStrategy \nStocks \nAvg Sharpe \nAvg Max DD \nAvg SPS \nAvg Final ($) \nML (LightGBM) \n20 \n-0.608 \n-27.20% \n0.527 \n$92.86 \nRL (PPO) \n11 \n-0.209 \n-23.85% \n0.571 \n$110.30 \nLLM (LLaMA3) \n20 \n-0.969 \n-12.86% \n0.580 \n$98.13 \nBuy-and-Hold \n20 \n1.1317 \n-18.00% \n0.6664 \n$135.17 \n \n \nFig. 3. Per-stock final portfolio values. Buy-and-hold (orange) dominates in growth stocks (NVDA, META) \nbut underperforms in declining stocks (PFE, DIS). LLM (red) shows the most consistent values near $100. \n \n5.7 Statistical Significance Tests \nWe use the Wilcoxon signed-rank test, which is a non-parametric paired test that works for per-stock SPS",
+    "page": 12
+  },
+  {
+    "text": "ificance Tests \nWe use the Wilcoxon signed-rank test, which is a non-parametric paired test that works for per-stock SPS \nscores that may not follow a normal distribution, to see if the observed SPS differences between strategies \nare statistically reliable. Table VIII shows the results of five pairwise comparisons No comparison attains \nstatistical significance at the p < 0.05 threshold. The LLM has the greatest mean SPS (0.580), and the \nML has the lowest (0.527). However, LLM strategy ranks the first among other strategies while ML ranks \nthe last considering their mean SPS of 0.580 and 0.527 respectively. However, the reason for not having \na statistically significant difference among various trading strategies is because of the high variability of \nSPS at an individual stock level.",
+    "page": 12
+  },
+  {
+    "text": "ant difference among various trading strategies is because of the high variability of \nSPS at an individual stock level. The non-significant difference between LLM and RL strategy (p = 0.966, \nmedian difference = -0.007) is enough to confirm that it is impossible to rank the strategies on the basis \nof SPS. Similarly, neither LLM nor ML strategy differs from buy and hold strategy (p = 0.165, p = 0.729). \nBased on the above findings, it can be concluded that care must be taken before determining any ranking \nusing mean SPS. It is due to the need for a large sample size and time period to perform statistical analysis.",
+    "page": 12
+  },
+  {
+    "text": "TABLE IX.  Wilcoxon Signed-Rank Tests on Per-Stock SPS Scores \n \nComparison \nW \np-value \nMedian diff \nResult \nLLM vs ML (20 stocks) \n78 \n0.304 \n+0.002 \nNot significant \nRL vs ML (11 matched) \n25 \n0.520 \n+0.012 \nNot significant \nLLM vs RL (11 matched) \n32 \n0.966 \n−0.007 \nNot significant \nBuy-and-Hold vs ML (20) \n95 \n0.729 \n+0.003 \nNot significant \nBuy-and-Hold vs LLM (20) \n67 \n0.165 \n−0.047 \nNot significant \n \nFig. 4. SPS distribution boxplot. Median SPS is similar across strategies. The large within-strategy variance \nexplains why pairwise Wilcoxon tests do not reach significance with n=20 stocks. \n \n6. DISCUSSION \n6.1 The Accuracy Performance Paradox \nOne of the main conclusions that can be derived from this analysis is the point that directionality does \nnot provide an adequate",
+    "page": 13
+  },
+  {
+    "text": "e main conclusions that can be derived from this analysis is the point that directionality does \nnot provide an adequate representation of the trader’s performance. The directional accuracy of the \nLLM model is also random (49.39%) but outperforms the benchmark ML model on the SPS criterion. \nThis difference is because standard accuracy metrics don't look at three important parts of trading \nperformance: (i) how big the returns were on moves that were correctly predicted, (ii) the total effect \nof transaction costs over a high-frequency signal sequence, and (iii) how long it takes to recover after \na series of losses. If a strategy is right on small moves and wrong on major ones, or if it changes \npositions too often and costs too much to do so, it can nevertheless be more than 50%",
+    "page": 13
+  },
+  {
+    "text": "g on major ones, or if it changes \npositions too often and costs too much to do so, it can nevertheless be more than 50% accurate in the",
+    "page": 13
+  },
+  {
+    "text": "right direction. The LLM's accuracy, which is almost random, isn't a huge concern because it doesn't \ntrade very often and can only respond to big market occurrences. This conclusion strongly supports the \nuse of execution-aware, simulation-in-the-loop evaluation as a frequent method in AI trading research, \neither alongside or in place of benchmarks that only look at accuracy. \n \n \nFig. 5 Sharpe ratio vs SPS scatter. LLM points (red triangles) are scattered widely across the Sharpe axis at \nnear-constant accuracy, demonstrating the accuracy–performance gap. ML and RL cluster more tightly. \n \n6.2 Paradigm-Specific Strengths and Limitations \nEach technique’s unique performance attributes are examined in detail below. The RL approach can \nbe applied in a fluctuating market environment. The",
+    "page": 14
+  },
+  {
+    "text": "rmance attributes are examined in detail below. The RL approach can \nbe applied in a fluctuating market environment. The average value of the portfolio based on this \napproach is $110.30, while the maximum performance of the stock is NVDA at $225.0. However, the \ncritical issue of this approach is that the performance of the method depends upon accurate incentive \nstructures and market forces, as seen in the degeneracy of nine stocks out of twenty to only hold. The \nML baseline gives the clearest and most consistent signals, but it can't see market changes that aren't \nlinear or don't stay the same over time because it only employs lagged return features. In trending \nmarkets, its average final portfolio value of $92.86 reveals that it routinely does worse than a buy-and-\nhold benchmark.",
+    "page": 14
+  },
+  {
+    "text": "arkets, its average final portfolio value of $92.86 reveals that it routinely does worse than a buy-and-\nhold benchmark. This is an issue with short-window regression techniques. The average MDD for the \nLLM technique is -12.86%, which is the lowest risk profile, and the SPS is 0.5802, which is the highest. \nIt doesn't need any historical training data because it only employs inference. This makes it easy to use \nin many ways. But it has latency and cost problems that need to be fixed in business settings because \nit doesn't trade as much and relies on external API infrastructure.",
+    "page": 14
+  },
+  {
+    "text": "Fig.6 Risk-Return-SPS bubble chart. Bubble size = average SPS. Buy-and-hold (orange) achieves the \nhighest return but suffers the greatest drawdown. LLM (red) offers the best risk-adjusted composite score. \n \n6.3 AlphaScope as Research Infrastructure \nOne more important aspect of this research is that it proves that AlphaScope is not only the platform \nfor trading but also the platform for research. Unlike other backtesting platforms, AlphaScope has some \nfeatures that allow us to consider transaction costs while evaluating a certain strategy, implement a \nmodular strategy using API more easily, and compare various paradigms within one single platform. \nIn this way, the gap between offline analysis and real-world analysis can be filled by this tool. The \ncurrent feature set of AlphaScope,",
+    "page": 15
+  },
+  {
+    "text": "gap between offline analysis and real-world analysis can be filled by this tool. The \ncurrent feature set of AlphaScope, including news, portfolio management, and alerting features, \nprovides us with a good basis for further research, particularly, using LLM-based agents reasoning in \ncontext. \n7 LIMITATIONS \nFirst, the RL algorithm exhibits convergence properties under the hold-only strategy for 9 out of the total \n20 securities analyzed. This means that the actual number of securities involved is 11. It implies that any \nconclusion made regarding the applicability of RL within the study would be limited since the state and \nreward have not been sufficiently defined in the low-volatility state. Second, the transaction cost function \nused assumes that transaction costs will always remain",
+    "page": 15
+  },
+  {
+    "text": "the low-volatility state. Second, the transaction cost function \nused assumes that transaction costs will always remain constant at 0.1% without considering the impact of \nslippage caused by changes in the spread and liquidity in the microstructure of the market. The transaction \ncost will probably be much higher when the trading strategy involves high volumes of trades. Third, LLMs \ntrade less frequently due to API rate limitations. All these differences lead to additional difficulties when \ncomparing data. For example, further research needs to standardize the number of trades or use local \nmodels to cope with inferential lag issues. Fourth, according to Wilcoxon signed-rank test, none of the",
+    "page": 15
+  },
+  {
+    "text": "pairwise comparisons, such as LLM and ML, RL and ML, and approach vs. BH, showed any statistical \nsignificance at p<0.05 level. This is because only 20 stocks and large variations per each method were \ntested. To ensure more robust inferential capacity, more samples and time horizons could be taken into \nconsideration. Finally, there are certain limitations in this work since it was conducted using only one \nperiod among five-year time frames from 2020 to 2024 when different market regimes exist, including \npandemic-induced collapse, bear markets of 2022, and an AI-driven bull market regime beginning from \n2023. \n \n8 CONCLUSION \n \nIt is clear from this study that measures of directionality on their own can never act as criteria for assessing \nthe performance of the AI trading strategy and",
+    "page": 16
+  },
+  {
+    "text": "s of directionality on their own can never act as criteria for assessing \nthe performance of the AI trading strategy and may actually mislead us. To conduct a proper comparative \nassessment of three distinct AI methods, such as reinforcement learning (PPO), supervised machine \nlearning (LightGBM), and large language models (LLaMA 3), we use AlphaScope as the simulation \nenvironment in our study. Specifically, we select 20 S&P 500 stocks and test their behavior over a span of \nfive years under identical settings. It turns out there exists trade-off between all of these techniques. The \nRL technique has the highest mean portfolio value at the end of run ($110.30). Consequently, LLM method \nshows the most efficient SP (SPS = 0.5802) as well as minimum maximum drawdown rate (-12.86%).",
+    "page": 16
+  },
+  {
+    "text": "Consequently, LLM method \nshows the most efficient SP (SPS = 0.5802) as well as minimum maximum drawdown rate (-12.86%). \nTherefore, in spite of similarities with stochastic method in terms of path of decision making, acceptable \nlevels of risk/rewards can be obtained. However, while being stable, the effectiveness of machine learning \nmethod ($92.86) is quite low. This indicates inability of algorithms based on invariability to adapt to \nchanging environment successfully. \nFrom among many statistical criteria used for evaluation, artificial intelligence methods have proven \nthemselves the most efficient in terms of: highest Sharpe ratio (1.1317); highest portfolio value ($135.17); \noptimal SP (0.6664). The maximum drawdown of −18.00%, however, means nothing in this case. Hence, \nthis is",
+    "page": 16
+  },
+  {
+    "text": "e ($135.17); \noptimal SP (0.6664). The maximum drawdown of −18.00%, however, means nothing in this case. Hence, \nthis is yet another reason to justify choosing the specified review period. As for Wilcoxon signed-rank test, \nobviously, there is no difference between pair-wise SPS comparisons for AI models and for the comparison \nwith buy-and-hold strategy. For example, in this case, more samples and universes should be taken to \nobtain necessary power of statistics. It is interesting to mention about the calculation of the Simulation \nPerformance Score (SPS). The SPS, as it is clearly shown, is the normalized performance measure, which \nincorporates multiple criteria including profitability, risks, and efficiency into one measure. As stated in \nthe paper, the simulation-in-the-loop",
+    "page": 16
+  },
+  {
+    "text": "ria including profitability, risks, and efficiency into one measure. As stated in \nthe paper, the simulation-in-the-loop technique of evaluation is definitely better than traditional accuracy-\nbased evaluation procedure. Generally speaking, the paper proves that no single statistic will do to evaluate \nmodels in various conditions. \n \n FUNDING AND CONFILICT OF INTEREST \n \n     We don’t have conflict of interest and not no funding is received. \nREFERENCES \n[1] J. Bollen, H. Mao, and X. Zeng, Twitter mood predicts the stock market, J. Comput. Sci. 2, 1–8 (2011). \n[2] T. Fischer and C. Krauss, Deep learning with long short-term memory networks for financial market \npredictions, Eur. J. Oper. Res. 270, 654–669 (2018). \n[3] X. Y. Liu et al., FinRL: Deep reinforcement learning framework to",
+    "page": 16
+  },
+  {
+    "text": "dictions, Eur. J. Oper. Res. 270, 654–669 (2018). \n[3] X. Y. Liu et al., FinRL: Deep reinforcement learning framework to automate trading in quantitative \nfinance, in Proceedings of the ACM ICAIF (2021). \n[4] A. Lopez-Lira and Y. Tang, Can ChatGPT forecast stock price movements?, arXiv:2304.07619 (2023). \n[5] S. Wu et al., BloombergGPT: A large language model for finance, arXiv:2303.17564 (2023).",
+    "page": 16
+  },
+  {
+    "text": "[6] R. Yu et al., LLM-based autonomous trading agents with retrieval-augmented market analysis, in \nProceedings of the ACM ICAIF (2024). \n[7] R. Almgren and N. Chriss, Optimal execution of portfolio transactions, J. Risk 3, 5–39 (2001). \n[8] J. Moody and M. Saffell, Learning to trade via direct reinforcement, IEEE Trans. Neural Netw. 12, 875-\n889 (2001). \n[9] J. D. Jobson and B. M. Korkie, Performance hypothesis testing with the Sharpe and Treynor measures, J. \nFinance 36, 889–908 (1981). \n[10] Y. Nevmyvaka, Y. Feng, and M. Kearns, Reinforcement learning for optimized trade execution, in \nProceedings of ICML, 673–680 (2006). \n[11] L. Mitra and A. Bhatt, Replication of predictive accuracy in algorithmic trading research, J. Financ. \nData Sci. 1, 86–106 (2019). \n[12] O. B. Sezer, M. U.",
+    "page": 17
+  },
+  {
+    "text": "of predictive accuracy in algorithmic trading research, J. Financ. \nData Sci. 1, 86–106 (2019). \n[12] O. B. Sezer, M. U. Gudelek, and A. M. Ozbayoglu, Financial time series forecasting with deep \nlearning: A systematic literature review 2005–2019, Appl. Soft Comput. 90, 106181 (2020). \n[13] Y. Deng et al., Deep direct reinforcement learning for financial signal representation and trading, \nIEEE Trans. Neural Netw. Learn. Syst. 28, 653–664 (2017). \n[14] V. DeMiguel, L. Garlappi, and R. Uppal, Optimal versus naive diversification: How inefficient is the \n1/N portfolio strategy?, Rev. Financ. Stud. 22, 1915–1953 (2009). \n[15] Z. Jiang, D. Xu, and J. Liang, A deep reinforcement learning framework for financial portfolio \nmanagement, arXiv:1706.10059 (2017). \n[16] D. Araci, FinBERT: Financial",
+    "page": 17
+  },
+  {
+    "text": "ment learning framework for financial portfolio \nmanagement, arXiv:1706.10059 (2017). \n[16] D. Araci, FinBERT: Financial sentiment analysis with pre-trained language models, arXiv:1908.10063 \n(2019). \n[17] G. Leitch and J. E. Tanner, Economic forecast evaluation: Profits versus the conventional error \nmeasures, Am. Econ. Rev. 81, 580–590 (1991). \n[18] M. Lopez de Prado, The 7 reasons most machine learning funds fail, J. Portfolio Manage. 44, 120–134 \n(2018). \n[19] J. Heaton, N. Polson, and J. Witte, Deep learning in finance, Annu. Rev. Financ. Econ. 9, 145–181 \n(2017). \n[20] S. Zhang, Y. Zohren, and S. Roberts, Deep learning for trading, J. Financ. Data Sci. 2, 8–20 (2020).",
+    "page": 17
+  }
+]

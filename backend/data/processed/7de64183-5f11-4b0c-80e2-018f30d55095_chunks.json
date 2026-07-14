@@ -1,0 +1,86 @@
+[
+  {
+    "text": "AI, Machine Learning and Data Science\n1\nDr. Faisal Anwer\nDepartment of Computer Science\nAligarh Muslim University, Aligarh-202002\n           Copyright © Dept of Computer Science, AMU, Aligarh. Permission required for reproduction or display.",
+    "page": 1
+  },
+  {
+    "text": "Review of Previous Lecture\n• Motivation behind Data Science\n• Objectives and Outcome of the Course\n• Operations of Data Science",
+    "page": 2
+  },
+  {
+    "text": "Contents\n• Data Science vs Machine Learning\n• AI vs Data Science\n• AI vs Machine Learning vs Data Science",
+    "page": 3
+  },
+  {
+    "text": "Data Science and Machine Learning",
+    "page": 4
+  },
+  {
+    "text": "Data Science\n• Data science\n– Interdisciplinary field\n– Includes\n• Scientific methods,\n• Processes and\n• Algorithms on structured and unstructured data to extract\ninsights.\n• Data Science combines:\n– Mathematics,\n– Statistics,\n– Computer science, and\n– specific expertise to uncover patterns, trends, and relationships\nwithin data.",
+    "page": 5
+  },
+  {
+    "text": "Data Science Stages\n• Data collection.\n• Data Storage\n• Data preprocessing.\n• Visualizing Data.\n• Modeling and evaluation.",
+    "page": 6
+  },
+  {
+    "text": "Machine Learning\n• Machine learning, a subfield of artificial intelligence.\n• Machine learning algorithms detect patterns and correlations\nwithin dataset.\n• Machine learning systems can make complex predictions and\nanalyses.\n• The fundamental principle of Machine Learning lies in its\nautonomous learning capability.",
+    "page": 7
+  },
+  {
+    "text": "Machine learning and Data Science\n(Similarities and Differences)\n• Similarities\nMachine learning workflows, similar to data science\n• Differences\n– Post Analysis\nData scientists typically interpret and report their findings,\nwhereas machine learning engineers focus on the model's\ndeployment, monitoring, and maintaining in a production\nenvironment.",
+    "page": 8
+  },
+  {
+    "text": "Data Science and Machine Learning",
+    "page": 9
+  },
+  {
+    "text": "Artificial Intelligence and Data \nScience",
+    "page": 10
+  },
+  {
+    "text": "Artificial Intelligence\n• Artificial intelligence makes machines \nseem like they have human intelligence.\n• The goal of AI is to:\n– Mimic the human and\n– Create systems that can function \nintelligently and independently.",
+    "page": 11
+  },
+  {
+    "text": "AI and Data Science\n• Tasks that constitute AI\n– Problem Solving\n– Knowledge Representation and Reasoning\n– Decision Making\n– Communication, perception and Actuation",
+    "page": 12
+  },
+  {
+    "text": "Problem Soving\n• Problem Solving\n– Maze game\n– Tic tac toe\n(No data no modelling)\n(Need efficient algo. A*, DFS/BFS)",
+    "page": 13
+  },
+  {
+    "text": "Knowledge Representation & \nReasoning\n• Knowledge Representation & Reasoning\n– Eight Queen’s problem\n– complex game rules\n(Write rules and apply reasoning)\n(No data no modelling)\n(Need propositional and first order logic.)",
+    "page": 14
+  },
+  {
+    "text": "Decision Making\n•\nDecision Making\nExpert Systems (when rules are well known)\n(Rules given by experts)\n(Rules encoded using knowledge representation)\n(Execution of rules by a program)\nLimitation of Expert Systems\nRules may be too complex\nRules may be inexpressible\nRules may be unknown (specially for new diseases) \nHere we can take help from Machine Learning, Reinforcement \nLearning, Deep Learning ( No need to write rules).",
+    "page": 15
+  },
+  {
+    "text": "• Communication\n– Traditionally\nAI\nagents\n(or\nrobots)\nare\nrequired\nto\ncommunicate with humans.\n– The agent should have capability of Natural Language\nProcessing\n– Modern NLP is data driven and ML/DL is best choice for\nNLP\n(Example: An agent can perform voice analysis using\nMachine learning/Deep Learning)\nCommunication, perception and \nActuation",
+    "page": 16
+  },
+  {
+    "text": "Communication, perception and \nActuation\n• Perception\n– How agent perceive the environment (i.e., how agent \nobserve around its surrounding)\n– It gives ability of vision and speech\n– Modern CV (computer vision) and speech are data \ndriven\n• Actuation\n– Performing some action by an agent (i.e robot)\n– Reinforcement Learning\n– This is data driven now.",
+    "page": 17
+  },
+  {
+    "text": "AI vs Data Science",
+    "page": 18
+  },
+  {
+    "text": "Data Science\nAI\nMachine\nLearning\nFocus\nExtracting insight \nfrom structured \nand unstructured \ndata for decision-\nmaking and \nplanning.\nEnable computers to \naccomplish complex \nintellectual tasks like \nhumans.\nProvide a way to \nsynthesize data, \nlearn from it and \nuse the insights to \nimprove over \ntime.\nApplication\nSolving Business \nproblems using \ndescriptive and  \npredictive \nanalytic.\nExamples:\nDisease \nprediction, \nFinancial analysis \nPerform tasks like \nhumans by learning, \nreasoning, and self-\ncorrection.\nExamples: Robots, \nVoice assistants, Online \ngaming.\nExtract \nknowledge from \ndata to learn from \nthat data and \nmake predictions.\nExamples: \nrecommendation \nsystem, Health \nmonitoring.",
+    "page": 19
+  },
+  {
+    "text": "AI vs Machine Learning vs Data \nScience",
+    "page": 20
+  },
+  {
+    "text": "Summary\n• In what way Data Science is related with Machine \nLearning.\n• The way AI and Data Science are related\n• Finally, the relation between AI, Machine Learning and \nData Science.",
+    "page": 21
+  }
+]
