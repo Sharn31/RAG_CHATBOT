@@ -128,15 +128,16 @@ Create `.env`
 
 ```env
 LLM_API_KEY=your_api_key
-LLM_BASE_URL=https://api.openai.com/v1
-LLM_MODEL=gpt-4o-mini
+LLM_BASE_URL=https://api.groq.com/openai/v1
+LLM_MODEL=llama-3.3-70b-versatile
+
 
 EMBEDDING_MODEL=sentence-transformers/all-MiniLM-L6-v2
 
-CHUNK_SIZE=500
-CHUNK_OVERLAP=100
+CHUNK_SIZE=800
+CHUNK_OVERLAP=120
 
-TOP_K=5
+TOP_K=3
 SIMILARITY_THRESHOLD=0.75
 MAX_HISTORY_TURNS=5
 
