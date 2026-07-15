@@ -1,0 +1,94 @@
+[
+  {
+    "text": "Machine Learning\nDr. Mohammad Nadeem\nDepartment of Computer Science\nAligarh Muslim University\n           Copyright © Dept of Computer Science, AMU, Aligarh. Permission required for reproduction or display.",
+    "page": 1
+  },
+  {
+    "text": "Content (Week)\nMachine Learning\nIts types\nSupervised learning\nSupervised learning algorithms\nImplementation of algorithms",
+    "page": 2
+  },
+  {
+    "text": "Content\nMachine Learning\nIts types\nRegression problems\nClassification problems",
+    "page": 3
+  },
+  {
+    "text": "What is Machine Learning?\nOne of the criticism of AI was, a machine is not intelligent if it \ncan not learn.\nLearning means doing the similar task efficiently next time.\nMachine learning is the science of getting computers \nto act without being explicitly programmed.\nLearning programs are adaptive.\nrequires data.",
+    "page": 4
+  },
+  {
+    "text": "Why?\nLearning vs Memorization\nLots of data available.\nCan handle voluminous, complex data to give accurate \nresults.\nTo identify pattern from data.",
+    "page": 5
+  },
+  {
+    "text": "Examples\nFriend suggestion on Social Media platforms.\nProduct/Video recommendation.\nAutomatic spam filtering",
+    "page": 6
+  },
+  {
+    "text": "Types of learning\nSupervised\nUnsupervised\nReinforced\nSemi-supervised",
+    "page": 7
+  },
+  {
+    "text": "Supervised learning\nlearns from example data and associated outputs are \nalready given.\npredicts the correct response for unseen examples. \nsimilar to human learning under the supervision of a \nteacher. \nEx: Classroom Teaching",
+    "page": 8
+  },
+  {
+    "text": "Supervised learning\nYear\nManufacturing \nCost (in million \ndollar)\nAdvertising\nCost (in million \ndollar)\nSales\n(in million \ndollar)\n1991\n27\n1\n35\n1992\n30\n1.67\n35.23\n-\n-\n-\n-\n2020\n50\n5.66\n59.23\nYear\nManufacturing \nCost (in million \ndollar)\nAdvertising\nCost (in million \ndollar)\nSales\n(in million \ndollar)\n2024\n66\n8.9\n?",
+    "page": 9
+  },
+  {
+    "text": "Supervised learning\nEmail\nSpam/Not spam\nDear Lucky Winner, You have been randomly selected in our \nBig Money Giveaway! Click the link below to claim your \nprize of $1,000,000 immediately.\nSpam\nHi Team, This is a reminder for our weekly project sync-up \nmeeting scheduled for tomorrow at 3 PM in the main \nconference room.\nNot Spam\n- - - - - - - -\n------\n- - - - - - - -\n------\nEmail\nSpam/Not spam\nHello, Are you suffering from any chronic pain! Our new \nmiracle drug cures all diseases. Order now and receive a 50% \ndiscount on your first purchase.\n?",
+    "page": 10
+  },
+  {
+    "text": "How Supervised Learning Works?\nThe training process.\nDifferent algorithms use different approaches for learning.\nMajor tasks: Regression and classification\nMajor algorithms:\no Linear Regression\no Logistic Regression\no Decision Tree\no Artificial Neural Network (ANN)",
+    "page": 11
+  },
+  {
+    "text": "Regression\n\nA supervised learning technique.\n\nWhen the output has real values (continuous variable).\nx1\nx2\nx3\nOutput\n2\n3\n1\n2.3\n4\n5\n2\n3.1\n6\n7\n5\n7.8\n-\n-\n-\n-\n-\n-\n-\n-\n3\n5\n4\n?",
+    "page": 12
+  },
+  {
+    "text": "Regression\n\nExample:\no What is the sale given advertising cost and manufacturing cost?\nYear\nManufacturing \nCost\nAdvertising\nCost\nSales\n1991\n27\n1\n35\n1992\n30\n1.67\n35.23\n-\n-\n-\n-\n-\n-\n-\n-\n-\n-\n-\n-\n2020\n50\n5.66\n?",
+    "page": 13
+  },
+  {
+    "text": "Regression\n\nExample:\no How much rain will fall in July this year in Mumbai?\nYear\nHumidity\nTemperature\nRain\n2010\n67\n38\n10\n2011\n75\n35\n12.34\n-\n-\n-\n-\n-\n-\n-\n-\n-\n-\n-\n-\n2019\n70\n38\n?",
+    "page": 14
+  },
+  {
+    "text": "Example\nx\ny",
+    "page": 15
+  },
+  {
+    "text": "Example\nx\ny",
+    "page": 16
+  },
+  {
+    "text": "Types\nLinear Regression\no Assumption: Linear relationship between independent variable \n(x) and dependent variable (y).\ny = β0​+β1​x+ϵ\nPolynomial Regression\no Assumption: Non-linear relationship between independent \nvariable (x) and dependent variable (y).\ny = β0​+β1​x+β1​x2+ . . . +βn​xn +ϵ\nMultiple Regression\no two or more independent variables and a single dependent variable.\ny = β0​+β1​X1+β1​X2+ . . . +βn​Xn +ϵ",
+    "page": 17
+  },
+  {
+    "text": "Classification\n\nA supervised learning technique.\n\nWhen the output is any one from fixed set of values (discrete \nvariable).\nx1\nx2\nx3\nOutput\n2\n3\n1\nclass1\n4\n5\n2\nclass2\n6\n7\n5\nclass1\n-\n-\n-\n-\n-\n-\n-\n-\n3\n5\n4\n?",
+    "page": 18
+  },
+  {
+    "text": "Classification\n\nExample: Whether game can be played tomorrow?\nHumidity\nWind \nspeed\nTemperature\nGame\nPossible?\n70\n34\n27\nYes\n64\n50\n35\nNo\n67\n43\n33\nYes\n-\n-\n-\n-\n-\n-\n-\n-\n66\n39\n22\n?",
+    "page": 19
+  },
+  {
+    "text": "Classification\n\nExample: What is the level of cancer?\nAge\nGender\nMediastinum\nCancer\n55\nFemale\nYes\nLevel3\n65\nMale\nNo\nLevel1\n60\nMale\nYes\nLevel2\n-\n-\n-\n-\n-\n-\n-\n-\n71\nFemale\nNo\n?",
+    "page": 20
+  },
+  {
+    "text": "Example\nx1\nx2\ny\n2\n1\nYes\n3\n2\nYes\n1\n5\nNo\n2\n6\nNo",
+    "page": 21
+  },
+  {
+    "text": "Example\nx1\nx2\ny\n2\n1\nYes\n3\n2\nYes\n1\n5\nNo\n2\n6\nNo",
+    "page": 22
+  },
+  {
+    "text": "Summary\n\nMachine Learning\n\nSupervised machine learning\no Regression\no Classification\n\nUnsupervised machine learning\n\nReinforcement learning\n\nSemi-supervised",
+    "page": 23
+  }
+]

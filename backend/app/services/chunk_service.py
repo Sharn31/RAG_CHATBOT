@@ -1,7 +1,3 @@
-"""Splits extracted page text into page-tagged chunks, and caches the result
-to `data/processed/` for inspection/debugging (not used at query time).
-"""
-
 import os
 import json
 from typing import List, Tuple, Dict

@@ -4,8 +4,6 @@ Holds, per session_id: uploaded filename, page count, and turn-by-turn chat
 history. Kept in memory for speed, persisted to CONVERSATION_HISTORY_PATH
 (a single JSON file keyed by session_id) so history survives a server restart.
 
-For multi-worker/production deployments, replace this with Redis or a database -
-a plain JSON file assumes a single process.
 """
 
 import json

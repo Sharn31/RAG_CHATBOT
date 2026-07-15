@@ -225,9 +225,53 @@
       }
     ]
   },
-  "755c5c40-5bf6-4ec5-90c6-81457d0b2ebd": {
+  "f53fb1c9-4fb5-4eea-b7dd-a995e20eb042": {
+    "filename": "ALPHASCOPE_synopsis.pdf",
+    "num_pages": 14,
+    "history": []
+  },
+  "c0c9eeb5-88f6-4006-a75a-c9f80dbbb1e8": {
     "filename": "Machine Learning.pdf",
     "num_pages": 23,
-    "history": []
+    "history": [
+      {
+        "role": "user",
+        "content": "what is machine learning?"
+      },
+      {
+        "role": "assistant",
+        "content": "Machine learning is the science of getting computers to act without being explicitly programmed, and it involves learning from data to do similar tasks efficiently next time."
+      },
+      {
+        "role": "user",
+        "content": "types?"
+      },
+      {
+        "role": "assistant",
+        "content": "The types of Machine Learning are mentioned, but only one type, \"Supervised learning\", is described. Other types are not specified in the given context."
+      }
+    ]
+  },
+  "0a4a016e-5dc9-4326-8891-6a2d4dccb95a": {
+    "filename": "Machine Learning.pdf",
+    "num_pages": 23,
+    "history": [
+      {
+        "role": "user",
+        "content": "what is machine learning ?"
+      },
+      {
+        "role": "assistant",
+        "content": "Machine learning is the science of getting computers to act without being explicitly programmed, and it requires data. It means doing a similar task efficiently next time, and learning programs are adaptive."
+      },
+      {
+        "role": "user",
+        "content": "types ?"
+      },
+      {
+        "role": "assistant",
+        "content": "The types of Machine Learning are mentioned, but only one type is specified: Supervised learning, and it is also mentioned that there are other types, but they are not listed in the given context."
+      }
+    ]
   }
 }
