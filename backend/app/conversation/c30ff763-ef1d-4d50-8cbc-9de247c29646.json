@@ -1,0 +1,26 @@
+{
+  "session_id": "c30ff763-ef1d-4d50-8cbc-9de247c29646",
+  "filename": "Dilkash Singh New.pdf",
+  "num_pages": 1,
+  "created_at": "2026-07-16T17:02:54.815027",
+  "history": [
+    {
+      "timestamp": "2026-07-16T17:04:16.510163",
+      "role": "user",
+      "content": "what is my name ?"
+    },
+    {
+      "timestamp": "2026-07-16T17:04:16.513470",
+      "role": "assistant",
+      "content": "Your name is Dilkash Singh."
+    }
+  ],
+  "metadata": {
+    "document_type": "resume",
+    "entities": {
+      "name": "Dilkash Singh",
+      "email": "dilkashmaan7@gmail.com",
+      "phone": "6280757008"
+    }
+  }
+}

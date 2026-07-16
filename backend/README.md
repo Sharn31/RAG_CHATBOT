@@ -98,6 +98,12 @@ Verify
 uv --version
 ```
 
+
+### Install all project dependencies from `pyproject.toml` and `uv.lock`:
+
+```bash
+uv sync
+```
 ### Create virtual environment
 
 ```bash
