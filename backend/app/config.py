@@ -21,12 +21,12 @@ class Settings(BaseSettings):
     EMBEDDING_MODEL: str = "all-MiniLM-L6-v2"
 
     # --- Chunking / retrieval ---
-    CHUNK_SIZE: int = 800
+    CHUNK_SIZE: int = 600
     CHUNK_OVERLAP: int = 120
-    TOP_K: int = 3
+    TOP_K: int = 5
     # Cosine distance (0 = identical, 1 = unrelated). If the best match's distance
     # exceeds this, the question is treated as out-of-scope without calling the LLM.
-    SIMILARITY_THRESHOLD: float = 0.75
+    SIMILARITY_THRESHOLD: float = 0.95
     MAX_HISTORY_TURNS: int = 5
 
     # --- Paths ---

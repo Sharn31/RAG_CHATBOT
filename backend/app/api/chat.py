@@ -23,14 +23,14 @@ async def chat(req: ChatRequest):
 
 @router.get("/session/{session_id}", response_model=SessionInfo)
 def get_session(session_id: str, memory: MemoryService = Depends(get_memory_service)):
-    s = memory.get(session_id)
-    if not s:
+    info = memory.get_session_info(session_id)
+    if not info:
         raise HTTPException(status_code=404, detail="Session not found.")
     return SessionInfo(
-        session_id=session_id,
-        filename=s["filename"],
-        num_pages=s["num_pages"],
-        turns=len(s["history"]) // 2,
+        session_id=info["session_id"],
+        filename=info["filename"],
+        num_pages=info["num_pages"],
+        turns=memory.get_conversation_count(session_id) // 2,
     )
 
 

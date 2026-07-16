@@ -1,8 +1,9 @@
 """Wraps the sentence-transformers embedding model, plus a pickle cache
 under data/embeddings/ so re-processing the same session is inspectable/reusable.
 """
-
 import os
+os.environ["HF_HUB_OFFLINE"] = "1"
+os.environ["TRANSFORMERS_OFFLINE"] = "1"
 import pickle
 from typing import List
 import numpy as np

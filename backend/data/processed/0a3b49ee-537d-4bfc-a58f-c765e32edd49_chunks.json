@@ -1,0 +1,70 @@
+[
+  {
+    "text": "Programming in Python\n(Error Handling )\n1\nDr. Faisal Anwer\nDepartment of Computer Science\nAligarh Muslim University\n           Copyright © Dept of Computer Science, AMU, Aligarh. Permission required for reproduction or display.",
+    "page": 1
+  },
+  {
+    "text": "Recap\n•Introduction to Module\n•Introduction to Package\n•Package Creation\n•Package Hierarchy",
+    "page": 2
+  },
+  {
+    "text": "Contents\n•Introduction to Error\n•Introduction to Exception\n•Handling Exceptions\n•Problems on Exception",
+    "page": 3
+  },
+  {
+    "text": "Error\n\nErrors in python can be distinguished in two different\nkinds: syntax errors and exceptions.\nSyntax errors are the most common kind of error we get while\nlearning Python.\n>>>for iin range(5): print('Hello world’)\n>>>SyntaxError: invalid syntax",
+    "page": 4
+  },
+  {
+    "text": "Exceptions\n\nA program may be syntactically correct, but it may cause an\nerror during execution.\nErrors detected during execution are called exceptions.\nAn exception is an event that disrupts the normal flow of the\nprogram's instructions.\nWhen a Python script encounters a situation that it can't\nhandle, it raises an exception.",
+    "page": 5
+  },
+  {
+    "text": "Exceptions\nAn exception is a Python object that represents an error.\nWhen a Python script raises an exception, it must be\nhandled immediately otherwise it would terminate and\ncome out.",
+    "page": 6
+  },
+  {
+    "text": "Example\nA = list(range(10))\no_count=0\ne_count=0\nfor i in range(20):\nif A[i]%2==0:\ne_count+=1\nelse:\no_count+=1\nprint(\"Count of even numbers: \",e_count)\nprint(\"Count of odd numbers: \",o_count)\nWithout \nException \nHandling\nIndexError: list index out of range",
+    "page": 7
+  },
+  {
+    "text": "Example\nA = list(range(10))\no_count=0\ne_count=0\nfor i in range(20):\ntry:\nif A[i]%2==0:\ne_count+=1\nelse:\no_count+=1\nexcept:\nprint(\"Index out of range\")\nbreak\nprint(\"Count of even numbers: \",e_count)\nprint(\"Count of odd numbers: \",o_count)\nWith \nException \nHandling",
+    "page": 8
+  },
+  {
+    "text": "Handling an exception\n• If a code may raise an exception, better to use a try: block to \ndefend\n• After the try:  block, include an except statement.\n• Syntax:\ntry:\nPerform your operations here;\n......................\nexcept Exception I:\nexecute this block. \nexcept Exception II:\nexecute this block. \nexcept Exception ..\n…………..\nelse:\nIf there is no exception then execute this block.",
+    "page": 9
+  },
+  {
+    "text": "Handling an exception\n•Example:\ntry:\nfh = open(“file1.txt\", \"r\") \nfh.write(”my name is XYZ”) \nexcept IOError:\nprint(\"Error: can\\'t find file or read data\")\nelse:\nprint(\"Written content in the file successfully\")\nfh.close()",
+    "page": 10
+  },
+  {
+    "text": "Handling an exception\n• Except clause with multiple exceptions:\n•You can also use the same except statement to handle multiple \nexceptions as  follows:\ntry:\nPerform operations here;\n......................\nexcept(Exception1[, Exception2[,...ExceptionN]]]):\nIf there is any exception from the given exception  list, then \nexecute this block\n.......................\nelse:\nIf there is no exception then execute this block.",
+    "page": 11
+  },
+  {
+    "text": "Handling an exception\n• Except clause with no exceptions can be used to catch all types of \nexceptions.\ntry:\nYou do your operations here;\n......................\nexcept:\nIf there is Exception, then execute this block.\n......................\nelse:\nIf there is no exception then execute this block.\n• The above type of exception handling is not considered a good  \nprogramming practice. though,",
+    "page": 12
+  },
+  {
+    "text": "Handling an exception\n• The try-finally clause:\n•You can use a finally: block along with a try: block.\ntry:\nYou do your operations here;\n......................\nDue to any exception, this may be skipped.  \nfinally:\nThis would always be executed.\n......................",
+    "page": 13
+  },
+  {
+    "text": "Handling an exception\n• The try-finally clause: Example\ntry:\nfh = open(\"testfile\", \"w\")\nfh.write(\"This is my test file for exception handling!!\")\nfinally:\nfh.close()",
+    "page": 14
+  },
+  {
+    "text": "Handling an exception\n• Try: This block will test the excepted error to occur\n• Except: Here you can handle the error\n• Else: If there is no exception then this block will be executed\n• Finally: Finally block always gets executed either exception is generated \nor not\n• Syntax:\ntry:\n# Some Code… \nexcept:\n# Optional block\n# Exception Handling  (if required)\nelse:\n# Execute if no exception occurs\nfinally:\n# Some code .....(always executed)",
+    "page": 15
+  },
+  {
+    "text": "Handling an exception\nwhile True:\ntry:\nn = int(input(\"Enter a number: \"))\nfh = open(\"testfile.txt\", \"w\")\nfh.write(\"This is my test file for exception handling!!\")\nsum=0\nfor i in range(n+1):\nsum=sum+i\nexcept IOError:\nprint(\"File Error\")\nbreak\nexcept ValueError:\nprint(\"Invalid entry, Please retry\")\nelse:\nprint(\"Sum is: \",sum)\nbreak\nfinally:\nfh.close()",
+    "page": 16
+  },
+  {
+    "text": "Summary\n•Discussion on Error\n•Discussion on Exception\n•Handling Exceptions\n•Problems on Exception",
+    "page": 17
+  }
+]

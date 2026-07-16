@@ -1,0 +1,58 @@
+[
+  {
+    "text": "SUKHMAN SINGH \nHoshiarpur, Punjab, India  |  +91-9915072279  |  sunnysaini062001@gmail.com \nGitHub: github.com/sukhman0345  |  LinkedIn: linkedin.com/in/sukhman012358 \nAvailable for Full-Time Opportunities | Backend Developer | Python Developer | Software Engineer \nPROFESSIONAL SUMMARY \nMotivated MCA student and Python Backend Developer with hands-on experience in Django REST Framework, FastAPI, \nSQL, MongoDB, and API development. Experienced in building scalable backend systems, integrating third-party APIs, and \ndeveloping data-driven applications. Strong foundation in Data Science, Machine",
+    "page": 1
+  },
+  {
+    "text": "tems, integrating third-party APIs, and \ndeveloping data-driven applications. Strong foundation in Data Science, Machine Learning, and Full-Stack Development.. \nProven ability to analyze large datasets, build predictive models, and create actionable data visualizations. Certified by IBM, \nAWS (Infosys Springboard), Microsoft, and Google.  \nTECHNICAL SKILLS \nData & Analytics:  SQL, Python (Pandas, NumPy, Scikit-learn), Power BI, Matplotlib, Plotly, Streamlit \nMachine Learning:  Classification, Regression, Data Pipelines, Feature Engineering, Model Evaluation \nBackend Development:  Python,",
+    "page": 1
+  },
+  {
+    "text": "rning:  Classification, Regression, Data Pipelines, Feature Engineering, Model Evaluation \nBackend Development:  Python, Django, Django REST Framework, FastAPI, Flask, REST APIs \nCloud & Tools:  AWS, Docker, Git, GitHub, Jupyter Notebook, Google Colab, VS Code \nProgramming Languages:  Python, JavaScript, Java, C++ \nINTERNSHIP EXPERIENCE \nPython Backend Developer Intern | Vasudev Innovative Software, Mohali, Punjab \nJan 2026 – present \n• Designed and developed RESTful APIs from scratch using Django REST Framework and FastAPI, enabling seamless \ncommunication between frontend and backend",
+    "page": 1
+  },
+  {
+    "text": "APIs from scratch using Django REST Framework and FastAPI, enabling seamless \ncommunication between frontend and backend services. \n• Integrated third-party APIs to extend application functionality and streamline external service interactions. \n• Built and optimized database models and queries using Django ORM, improving data retrieval efficiency and backend \nperformance. \n• Currently working on scalable backend systems using Django REST Framework and FastAPI for production-grade \napplications. \nPython with Data Science Intern | o7 Services, Hoshiarpur \nJun 2025 – Jul 2025 \n• Conducted",
+    "page": 1
+  },
+  {
+    "text": "uction-grade \napplications. \nPython with Data Science Intern | o7 Services, Hoshiarpur \nJun 2025 – Jul 2025 \n• Conducted exploratory data analysis on large datasets using Pandas and NumPy, extracting key trends and actionable \nbusiness insights. \n• Designed interactive dashboards and visualizations using Matplotlib and Plotly for stakeholder reporting, improving data \ncommunication. \n• Cleaned, transformed, and validated raw datasets to ensure data integrity for analytical workflows. \nWeb Development Intern | o7 Services, Hoshiarpur \nJun 2023 – Jul 2023 \n• Built responsive web interfaces",
+    "page": 1
+  },
+  {
+    "text": "cal workflows. \nWeb Development Intern | o7 Services, Hoshiarpur \nJun 2023 – Jul 2023 \n• Built responsive web interfaces using HTML, CSS, and JavaScript following industry best practices and agile \nworkflows. \nKEY PROJECTS \nBizSentra -eCommerce Analytics Dashboard | Python | Django REST | Shopify API \nJan – Jun 2026 \nhttps://github.com/sukhman0345/Bizsentra \n• Built a full-stack analytics platform integrating Shopify APIs to deliver real-time business insights including Gross/Net \nRevenue, Refund Rate, Return Rate, and Cancelled Orders  directly relevant to payment data analysis. \n• Developed",
+    "page": 1
+  },
+  {
+    "text": "s/Net \nRevenue, Refund Rate, Return Rate, and Cancelled Orders  directly relevant to payment data analysis. \n• Developed scalable backend services using Django REST Framework with secure authentication and clean REST APIs \nfor seamless data consumption. \n• Implemented dynamic dashboard reporting enabling data-driven decision-making for eCommerce businesses. \n \nDOMP - Disease Outcome Prediction System | Python | Flask | Scikit-learn | Supabase \nAug – Nov 2025 \nhttps://github.com/sukhman0345/Capstone_Project_Flask",
+    "page": 1
+  },
+  {
+    "text": "• Designed and trained an ML classification model to predict disease outcomes with high accuracy; built a Flask web \ninterface for real-time predictions. \n• Integrated Supabase for secure backend data storage, demonstrating ability to manage structured data at scale. \nCarbonivor -CO₂ Emission Visualization Dashboard | Python | Pandas | Matplotlib \nhttps://github.com/sukhman0345/theCarbonivore \n• Analyzed a global agri-food CO₂ emissions dataset to identify multi-country emission trends across sectors, producing \ninteractive visualizations for environmental insight. \nAI Chatbot JavaScript |",
+    "page": 2
+  },
+  {
+    "text": "mission trends across sectors, producing \ninteractive visualizations for environmental insight. \nAI Chatbot JavaScript | Gemini API                                                                                         \nhttps://github.com/sukhman0345/chatbot \n• Developed a real-time conversational chatbot powered by Google's Gemini API with dynamic UI and multi-turn \nconversation handling. \nLifeOS - AI Personal Life Manager | Google ADK | MCP Servers                                                       Jun 2026       \nhttps://github.com/sukhman0345/lifeos-agent \n• \nLifeOS is an AI-powered",
+    "page": 2
+  },
+  {
+    "text": "Jun 2026       \nhttps://github.com/sukhman0345/lifeos-agent \n• \nLifeOS is an AI-powered personal life manager that uses Google ADK multi-agent system to manage tasks, schedule, \nfinances, and health through a single natural language chat interface. \n \nBidAgent AI - AI Proposal Generation Platform | FastAPI | React | Qdrant | Groq AI                      Jul 2026       \nhttps://github.com/sukhman0345/Bid_Agent \n• \nBuilt an AI-powered bid proposal platform using FastAPI, React, JWT authentication, and role-based access \ncontrol.  \n• \nDeveloped a RAG pipeline",
+    "page": 2
+  },
+  {
+    "text": "roposal platform using FastAPI, React, JWT authentication, and role-based access \ncontrol.  \n• \nDeveloped a RAG pipeline with Sentence Transformers and Qdrant for semantic project retrieval.  \n• \nIntegrated Groq LLM for AI-generated cover letters with Knowledge Base and Prompt Management. \n \nPDF RAG Chatbot | FastAPI | FAISS | Sentence Transformers | Groq AI                                       Jul 2026 \nhttps://github.com/sukhman0345/pdf-rag-chatbot \n• \nDeveloped a RAG-based PDF chatbot using FastAPI for document-specific question answering.  \n• \nImplemented PDF parsing, text chunking,",
+    "page": 2
+  },
+  {
+    "text": "G-based PDF chatbot using FastAPI for document-specific question answering.  \n• \nImplemented PDF parsing, text chunking, Sentence Transformers embeddings, and FAISS for semantic search.  \n• \nIntegrated Groq LLM with conversation context, source page citation, and out-of-scope question detection. \n \nEDUCATION \nMaster of Computer Applications (MCA) \n2024 – 2026 \nGNA University, Phagwara \nBachelor of Computer Applications (BCA) \n2021 – 2024 \nSant Baba Bhag Singh University | CGPA: 7.5 \n12th CBSE (Senior Secondary) \n2021 \nSant Baba Bhag Singh International School, Khiala | 68% \n10th CBSE",
+    "page": 2
+  },
+  {
+    "text": "sity | CGPA: 7.5 \n12th CBSE (Senior Secondary) \n2021 \nSant Baba Bhag Singh International School, Khiala | 68% \n10th CBSE (Secondary) \n2019 \nSant Baba Bhag Singh International School, Khiala | 61% \nCERTIFICATIONS \n• AWS Certified Developer – Associate (Infosys Springboard)  June 2025 \n• Python for Data Science – IBM SkillsBuild  March 2026 \n• Machine Learning with Python – IBM SkillsBuild  April 2026 \n• Career Essentials in Data Analysis – Microsoft & LinkedIn Learning  June 2025 \n• 5-Day AI Agents Intensive Course – Google, 2025 \n• Backend API Development with Node.js & Express \n• 45-Day Web",
+    "page": 2
+  },
+  {
+    "text": "2025 \n• 5-Day AI Agents Intensive Course – Google, 2025 \n• Backend API Development with Node.js & Express \n• 45-Day Web Development Training (HTML, CSS, JavaScript, PHP, MySQL) - 2023",
+    "page": 2
+  }
+]
