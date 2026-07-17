@@ -1,0 +1,87 @@
+{
+  "session_id": "bc3972b4-8eb6-4096-ae7e-49c314ec67e1",
+  "filename": "New-York-Resume-Template-Creative.pdf",
+  "num_pages": 2,
+  "created_at": "2026-07-17T12:04:31.918991",
+  "history": [
+    {
+      "timestamp": "2026-07-17T12:04:44.527971",
+      "role": "user",
+      "content": "what is my name ?"
+    },
+    {
+      "timestamp": "2026-07-17T12:04:44.530366",
+      "role": "assistant",
+      "content": "Your name is Robert Cooper."
+    },
+    {
+      "timestamp": "2026-07-17T12:05:11.714585",
+      "role": "user",
+      "content": "what is my skills ?"
+    },
+    {
+      "timestamp": "2026-07-17T12:05:11.716586",
+      "role": "assistant",
+      "content": "Your skills include:\n\n1. Investigation skills\n2. Safety compliance\n3. Criminal justice knowledge\n4. Restraining devices\n5. Martial arts/Physical combat training"
+    },
+    {
+      "timestamp": "2026-07-17T12:05:27.442434",
+      "role": "user",
+      "content": "my education ?"
+    },
+    {
+      "timestamp": "2026-07-17T12:05:27.444427",
+      "role": "assistant",
+      "content": "Your education includes:\n\n1. Certified Protection Guard Program (CPOP), International Foundation for Protection Guards, Alexandria (January 2021 — April 2022)\n2. Security Guard Certificate Program (SOCP), ASIS International, North Naples (April 2022 — April 2022)\n3. Currently pursuing a bachelor's degree in Criminal Justice. \n\nCourse curriculum includes:\n- Law Enforcement Ethics\n- Foundations in Criminal Law\n- Report Writing\n- Criminal Profiling\n- Interviewing Techniques\n- Crisis Intervention\n- S.A.F.E. Approach Level II Training (Hawaii Western College, January 2015 — November 2019)"
+    },
+    {
+      "timestamp": "2026-07-17T12:05:48.175813",
+      "role": "user",
+      "content": "what is my achievements ?"
+    },
+    {
+      "timestamp": "2026-07-17T12:05:48.177687",
+      "role": "assistant",
+      "content": "Your achievements include:\n\n1. Reduced theft by 28% in the building.\n2. Improved access control, which reduced unauthorized entry and solicitation by 26% using an announcement notification app."
+    },
+    {
+      "timestamp": "2026-07-17T12:06:29.307341",
+      "role": "user",
+      "content": "what is my profession?"
+    },
+    {
+      "timestamp": "2026-07-17T12:06:29.310341",
+      "role": "assistant",
+      "content": "Your profession is a Security Guard."
+    },
+    {
+      "timestamp": "2026-07-17T12:06:42.146589",
+      "role": "user",
+      "content": "what is my location ?"
+    },
+    {
+      "timestamp": "2026-07-17T12:06:42.148591",
+      "role": "assistant",
+      "content": "Your locations include:\n\n1. Port Washington (while working at ADT Security)\n2. Alexandria (while attending Certified Protection Guard Program)\n3. North Naples (while attending Security Guard Certificate Program)\n4. Hawaii (while attending S.A.F.E. Approach Level II Training at Hawaii Western College)\n5. Jogbani (while working at Copwatch)"
+    },
+    {
+      "timestamp": "2026-07-17T12:07:05.372934",
+      "role": "user",
+      "content": "what is my phone number"
+    },
+    {
+      "timestamp": "2026-07-17T12:07:05.376249",
+      "role": "assistant",
+      "content": "Your phone is 3868683442."
+    }
+  ],
+  "metadata": {
+    "document_type": "resume",
+    "entities": {
+      "name": "Robert Cooper",
+      "email": "email@email.com",
+      "phone": "3868683442",
+      "linkedin": null
+    }
+  }
+}
