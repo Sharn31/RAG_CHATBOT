@@ -857,6 +857,48 @@ def match_identity_question(question: str) -> Optional[str]:
 # Main RAG Functions
 # ============================================================================
 
+# def ingest_pdf(pdf_path: str, filename: str) -> UploadResponse:
+#     """Full ingestion pipeline: extract -> chunk -> embed -> index -> register session."""
+
+#     pages = pdf_service.extract_pages(pdf_path)
+#     if not pages:
+#         raise ValueError("No extractable text found in PDF (it may be scanned/image-only).")
+
+#     chunks = chunk_service.build_chunks(pages)
+#     if not chunks:
+#         raise ValueError("PDF text could not be split into chunks.")
+
+#     doc_type = detect_document_type(chunks)
+
+#     entities = {}
+#     if doc_type == DocumentType.RESUME:
+#         entities = ResumeEntityExtractor.extract_entities(chunks)
+
+#     session_id = generate_session_id()
+
+#     chunk_service.cache_chunks(session_id, filename, chunks)
+
+#     texts = [c["text"] for c in chunks]
+#     embeddings = embedding_service.embed_texts(texts)
+#     embedding_service.cache_embeddings(session_id, embeddings)
+
+#     store = vector_service.get_vector_store()
+#     store.create_session_collection(session_id, chunks, embeddings)
+
+#     memory = memory_service.get_memory_service()
+#     memory.create_session(session_id, filename, len(pages))
+
+#     memory.set_metadata(session_id, {
+#         "document_type": doc_type.value,
+#         "entities": entities,
+#     })
+
+#     return UploadResponse(
+#         session_id=session_id,
+#         filename=filename,
+#         num_pages=len(pages),
+#         num_chunks=len(chunks),
+#     )
 def ingest_pdf(pdf_path: str, filename: str) -> UploadResponse:
     """Full ingestion pipeline: extract -> chunk -> embed -> index -> register session."""
 
@@ -870,9 +912,16 @@ def ingest_pdf(pdf_path: str, filename: str) -> UploadResponse:
 
     doc_type = detect_document_type(chunks)
 
-    entities = {}
-    if doc_type == DocumentType.RESUME:
-        entities = ResumeEntityExtractor.extract_entities(chunks)
+    # Always attempt extraction — cheap, and each extractor already
+    # returns None per-field if not found. Don't gate this behind
+    # doc_type classification: detect_document_type only checks a
+    # ~1000-char window for 3+ literal keyword matches, and a resume
+    # whose header leads with contact *values* (email address, phone
+    # digits) rather than the literal words "email"/"phone"/"contact"
+    # can easily fall short of that threshold and get misclassified as
+    # GENERAL — which would silently disable the identity shortcut for
+    # the whole session.
+    entities = ResumeEntityExtractor.extract_entities(chunks)
 
     session_id = generate_session_id()
 
@@ -899,7 +948,6 @@ def ingest_pdf(pdf_path: str, filename: str) -> UploadResponse:
         num_pages=len(pages),
         num_chunks=len(chunks),
     )
-
 
 def answer_question(session_id: str, question: str) -> ChatResponse:
     """Full query pipeline. Two resume-only fast paths run before falling

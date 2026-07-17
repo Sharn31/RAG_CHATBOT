@@ -1,0 +1,42 @@
+{
+  "session_id": "1cf02da6-524d-48e5-98b5-32e909c389af",
+  "filename": "Prabhjot_Singh_Resume.pdf",
+  "num_pages": 2,
+  "created_at": "2026-07-17T16:34:30.244177",
+  "history": [
+    {
+      "timestamp": "2026-07-17T16:36:14.254327",
+      "role": "user",
+      "content": "who i am ?"
+    },
+    {
+      "timestamp": "2026-07-17T16:36:14.273926",
+      "role": "assistant",
+      "content": "PRABHJOT SINGH, a React.js | Next.js | Node.js Developer."
+    },
+    {
+      "timestamp": "2026-07-17T16:36:24.702498",
+      "role": "user",
+      "content": "Who is Prabhjot ?"
+    },
+    {
+      "timestamp": "2026-07-17T16:36:24.705496",
+      "role": "assistant",
+      "content": "Prabhjot Singh is a React.js | Next.js | Node.js Developer with 4+ years of experience building scalable, high-performance web applications."
+    },
+    {
+      "timestamp": "2026-07-17T16:37:52.789803",
+      "role": "user",
+      "content": "Next.js ?"
+    },
+    {
+      "timestamp": "2026-07-17T16:37:52.794804",
+      "role": "assistant",
+      "content": "Next.js is a framework used for building server-rendered, static, and performance-optimized web applications, with features such as App Router, API Routes, Server Components, and Server Actions."
+    }
+  ],
+  "metadata": {
+    "document_type": "general",
+    "entities": {}
+  }
+}
